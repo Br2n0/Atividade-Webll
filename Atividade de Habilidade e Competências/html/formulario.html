@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Hábeis Centro Educacional</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../imagens/logotipo.png" alt="Logotipo Hábeis Centro Educacional">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#cursos">Cursos</a></li>
+                    <li><a href="index.html#certificados">Certificados</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="formulario-section">
+        <div class="container">
+            <h1>Cadastro de Aluno</h1>
+            <p>Preencha o formulário abaixo para se cadastrar em nossos cursos e obter certificados.</p>
+
+            <form id="cadastro-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo*</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento*</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone*</label>
+                    <input type="text" id="telefone" name="telefone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Área de Interesse*</label>
+                    <select id="area" name="area" required>
+                        <option value="">Selecione uma área</option>
+                        <option value="administrativa">Administrativa</option>
+                        <option value="juridica">Jurídica</option>
+                        <option value="saude">Saúde</option>
+                        <option value="educacao">Educação</option>
+                        <option value="outra">Outra</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nível de Escolaridade*</label>
+                    <div class="radio-group">
+                        <input type="radio" id="medio" name="escolaridade" value="medio" required>
+                        <label for="medio">Ensino Médio</label>
+
+                        <input type="radio" id="superior" name="escolaridade" value="superior">
+                        <label for="superior">Ensino Superior</label>
+
+                        <input type="radio" id="posGraduacao" name="escolaridade" value="posGraduacao">
+                        <label for="posGraduacao">Pós-Graduação</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Interesses*</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="concursoPublico" name="interesses" value="concursoPublico" required>
+                        <label for="concursoPublico">Concurso Público</label>
+
+                        <input type="checkbox" id="certificacao" name="interesses" value="certificacao">
+                        <label for="certificacao">Certificação Profissional</label>
+
+                        <input type="checkbox" id="aprimoramento" name="interesses" value="aprimoramento">
+                        <label for="aprimoramento">Aprimoramento Profissional</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="observacoes">Observações Adicionais</label>
+                    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Cadastrar</button>
+                    <button type="reset" class="btn-secundario">Limpar</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="resultado-cadastro" style="display: none;">
+                <h2>Dados do Cadastro</h2>
+                <div id="dados-cadastro"></div>
+            </div>
+            
+            <div id="historico" class="historico-section">
+                <h2>Histórico de Cadastros</h2>
+                <div id="historico-cadastros" class="historico-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo-footer">
+                <img src="../imagens/logotipo.png" alt="Logotipo Hábeis Centro Educacional">
+            </div>
+            <div class="info">
+                <p>&copy; 2025 Hábeis Centro Educacional - Sistema de Gestão de Certificados</p>
+                <p>Desenvolvido por Bruno Santos Ferreira</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/validacao.js"></script>
+</body>
+</html> 
